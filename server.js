@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 
 // might not need this
-const helpers = require('./utils/helpers');
+// const helpers = require('./utils/helpers');
 
 const sequelize = require('./conifig/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -16,7 +16,8 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-    secret: "SHHH. It's a secret to everybody",
+    // secret: "SHHH. It's a secret to everybody",
+    secret: process.env.SECRET,
     cookie: {},
     resave: false,
     saveUnitialized: true,

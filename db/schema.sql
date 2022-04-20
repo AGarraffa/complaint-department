@@ -1,1 +1,2 @@
--- drop and build the complaint_db
+DROP DATABASE IF EXISTS complaint_db;
+CREATE DATABASE complaint_db;
